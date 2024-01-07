@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.atguigu.guilimall.coupon.demos.web;
+package com.atguigu.gulimall.order.demos.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;

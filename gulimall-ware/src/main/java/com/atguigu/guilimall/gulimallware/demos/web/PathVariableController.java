@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.atguigu.guilimall.gulimallware.demos.web;
+package com.atguigu.gulimall.gulimallware.demos.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;

@@ -90,7 +90,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>${spring-boot.version}</version>
                 <configuration>
-                    <mainClass>com.atguigu.guilimall.common.GuilimallCommonApplication</mainClass>
+                    <mainClass>com.atguigu.gulimall.common.GuilimallCommonApplication</mainClass>
                     <skip>true</skip>
                 </configuration>
                 <executions>
