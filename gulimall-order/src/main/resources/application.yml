@@ -9,3 +9,9 @@ spring:
     password: root
     url: jdbc:mysql://192.168.149.130:3306/gulimall_oms?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
     driver-class-name: com.mysql.cj.jdbc.Driver
+  cloud:
+    nacos:
+      serverAddr: 127.0.0.1:8848
+  config:
+    import:
+      - nacos:nacos-config-example.properties?refresh=true
