@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 
 
@@ -28,8 +29,16 @@ public class CategoryController {
     /**
      * 列表
      */
+    @RequestMapping("/list/getProductTree")
+    public R getProductTree(@RequestParam Map<String, Object> params){
+        List<CategoryEntity> productTree = categoryService.listWithTree();
+        return R.ok().put("data", productTree);
+    }
+
+    /**
+     * 列表
+     */
     @RequestMapping("/list")
-    //@RequiresPermissions("product:category:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = categoryService.queryPage(params);
 
