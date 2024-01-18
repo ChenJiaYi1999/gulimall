@@ -42,6 +42,20 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryDao, CategoryEntity
         return level1Menus;
     }
 
+    @Override
+    public void removeMenuByIds(List<Long> asList) {
+        //TODO 检查当前删除的菜单，是否被别的地方引用
+//        List<CategoryBrandRelationEntity> categoryBrandRelation =
+//                categoryBrandRelationService.list(new QueryWrapper<CategoryBrandRelationEntity>().in("catelog_id", asList));
+
+//        if (categoryBrandRelation.size() == 0) {
+            //逻辑删除
+            baseMapper.deleteBatchIds(asList);
+//        } else {
+//            throw new RuntimeException("该菜单下面还有属性，无法删除!");
+//        }
+    }
+
     private List<CategoryEntity> getChildren(CategoryEntity category, List<CategoryEntity> all){
         List<CategoryEntity> children;
         children = all.stream().filter(categoryEntity ->
